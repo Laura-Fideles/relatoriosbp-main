@@ -24,7 +24,7 @@ export const Home = () => {
     //caixa texto sociedade
     <GridWrapper>
       <ShowMap handler={handler}/>
-      <TextBox infoMap={infoMap}/>
+      <TextBox infoMap={infoMap} handler={handler}/>
     </GridWrapper>
 
 )
