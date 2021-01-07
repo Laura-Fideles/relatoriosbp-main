@@ -5,8 +5,8 @@ import GraphicMale from "./GraphicMale";
 import brTopo from "../Mapa/DataState.json";
 import styled from 'styled-components';
 
-
-const Page = styled.div`
+const Styles = styled.div`
+  .GraphicFemale { width: 200%; height: 200%;  }
   align-items: center;
   display: grid;
   border-style: double;
@@ -16,6 +16,19 @@ const Page = styled.div`
   margin-right: 1.5em;
   grid-template-columns: repeat(0, 1fr);
 `;
+
+
+const Aumentar = styled.div`
+  width: 160%;
+  height: 160%;
+`;
+
+const Diminuir = styled.div`
+  width: 60%;
+  height: 60%;
+`;
+
+
 
 const GridWrapper = styled.div`
   display: grid;
@@ -76,13 +89,19 @@ class Graphics extends React.Component {
       <div>
         <br/><br/>
         {/* <GraphicTotal infoMap={this.props.infoMap}/> */}
-        <Page>
+        <Styles>
+          <Diminuir>
         <GraphicTotal/>
+        </Diminuir>
         <GridWrapper>
-          <GraphicFemale/>
+          <Aumentar>
+          <GraphicFemale />
+          </Aumentar>
+          <Aumentar>
           <GraphicMale/>
+          </Aumentar>
         </GridWrapper>
-        </Page>
+        </Styles>
       </div>
     );
   }

@@ -29,12 +29,6 @@ export const state = {
   datasets: [
     {
       label: 'DataExam',
-      width: [
-        '200%'
-      ],
-      height: [
-        '200%'
-      ],
       backgroundColor:[
         '#66cc33',
         '#f79c29'
@@ -52,7 +46,7 @@ export class GraphicFemale extends React.Component {
   render() {
     return (
       <div>
-        <Pie
+        <Pie Style='width: 200%; height: 200%'
           data={state}
           options={{
             title: {
