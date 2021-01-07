@@ -10,3 +10,4 @@ export const NoMatch = () => (
     <h2>No Match</h2>
   </Wrapper>
 )
+

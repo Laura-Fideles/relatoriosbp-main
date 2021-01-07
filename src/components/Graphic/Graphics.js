@@ -1,59 +1,89 @@
-// // // import brTopo from "../Mapa/DataState.json";
-// import React from 'react';
-// import { Pie } from 'react-chartjs-2';
-// import ReactDOM from "react-dom";
+import React from 'react';
+import GraphicTotal from "./GraphicTotal";
+import GraphicFemale from "./GraphicFemale";
+import GraphicMale from "./GraphicMale";
+import brTopo from "../Mapa/DataState.json";
+import styled from 'styled-components';
 
-// export default class Graphic extends React.Component{
-//   constructor(props){
-//     super(props);
 
-//     this.state = {
-//       series: [123,234,456],
-//       options: {
-//         chart: {
-//           width: '100%',
-//           type: 'pie',
-//         },
-//         labels: ["Aprovados", "Reprovados", "Ausentes"],
-//         theme: {
-//           monochrome: {
-//             enable: true
-//           }
-//         },
-//         plotOptions: {
-//           pie: {
-//             dataLabels: {
-//               offset: -5
-//             }
-//           }
-//         },
-//         title: {
-//           text: "Taxa de aprovação total"
-//         },
-//         dataLabels: {
-//           formatter(val, opts){
-//             const name = opts.w.globals.labels[opts.seresIndex]
-//             return [name, val.toFixed(1)+'%']
-//           }
-//         },
-//         legend: {
-//           show: false
-//         }
-//       },
-//     };
-//   }
-//   render() {
-//     return(
+const Page = styled.div`
+  align-items: center;
+  display: grid;
+  border-style: double;
+  border-radius: 8px;
+  margin-bottom: 1.5em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+`;
 
-//       <div id="chart">
-//         <ReactApexChart options={this.state.options} series={this.state.series} type="pie"/>
-//       </div>
+const GridWrapper = styled.div`
+  display: grid;
+  grid-gap: 10px;
+  margin-top: 1em;
+  margin-left: 6em;
+  margin-right: 6em;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(25px, auto);
+  align-items: center;
+  display: grid;
+  width: 80%;
+  height: 80%;
+`; 
 
-//     );
-//   }
-// }
+class Graphics extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            filterText: '',
+            inStockOnly: false,
+            filteredInfo: [],
+        };
+        this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
+        this.handleInStockChange = this.handleInStockChange.bind(this);
 
-// const domContainer = document.querySelector('#app');
-// ReactDOM.render(React.createElement(Graphic), domContainer);
+    }
 
-// //url: https://apexcharts.com/react-chart-demos/pie-charts/monochrome-pie/
+    componentDidMount(){
+      this.setState({
+        mapData: brTopo.objects.estados.geometries,
+      })
+    }
+
+    handleFilterTextChange(filterText){
+      const filterFunction = (item) => { return item.properties.NAME === filterText }
+        const filteredData = this.state.mapData.find(filterFunction)
+         const infoMap = {
+          nome: filteredData['properties']['NAME'],
+          aprovados: filteredData['properties']['APROVADOS'],
+          reprovados: filteredData['properties']['REPROVADOS'],
+          porcentagem_aprovados: filteredData['properties']['PORCENTAGEM_APROVADOS'],
+          porcentagem_reprovados: filteredData['properties']['PORCENTAGEM_REPROVADOS'],
+          total: filteredData['properties']['TOTAL']
+        }
+        this.props.handler(infoMap)
+      }
+
+    handleInStockChange(inStockOnly){
+        this.setState({
+            inStockOnly: inStockOnly
+        })
+    }
+
+  render() {
+    return (
+      <div>
+        <br/><br/>
+        {/* <GraphicTotal infoMap={this.props.infoMap}/> */}
+        <Page>
+        <GraphicTotal/>
+        <GridWrapper>
+          <GraphicFemale/>
+          <GraphicMale/>
+        </GridWrapper>
+        </Page>
+      </div>
+    );
+  }
+}
+
+export default Graphics;

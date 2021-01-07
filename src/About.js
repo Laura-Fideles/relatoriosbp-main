@@ -1,16 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 import Graphics from "./components/Graphic/Graphics";
+import ShowInfo from "./components/InfoSociedade/ShowInfo";
+import './components/Graphic/Graphics.css';
 
-const GridWrapper = styled.div`
+const Page = styled.div`
+  align-items: center;
   display: grid;
-  grid-gap: 10px;
-  margin-top: 1em;
+  width: 80%;
+  height: 80%;
+`;
+
+const TxtInfoSociedade = styled.div` 
+  display: grid;
+  margin-top: 2em;
   margin-left: 6em;
   margin-right: 6em;
-  grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: minmax(25px, auto);
-`; 
+`;
+
 export const About = () => (
 
   // const [ infoMap, setInfoMap ] = useState({})
@@ -18,26 +26,11 @@ export const About = () => (
   // const handler = (params) => {
   //   setInfoMap(params)
   // }
-
-  <GridWrapper>
-    {/* <Chart
-  width={'500px'}
-  height={'300px'}
-  chartType="PieChart"
-  loader={<div>Loading Chart</div>}
-  data={[
-    ['Task', 'Hours per Day'],
-    ['Work', 11],
-    ['Eat', 2],
-    ['Commute', 2],
-    ['Watch TV', 2],
-    ['Sleep', 7],
-  ]}
-  options={{
-    title: 'My Daily Activities',
-  }}
-  rootProps={{ 'data-testid': '1' }}
-/> */}
-  </GridWrapper>
+<Page>
+  <TxtInfoSociedade>
+  <ShowInfo/>
+  </TxtInfoSociedade>
+    <Graphics/>
+  </Page>
 
 )
