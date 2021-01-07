@@ -9,8 +9,6 @@ const Styles = styled.div`
   .GraphicFemale { width: 200%; height: 200%;  }
   align-items: center;
   display: grid;
-  border-style: double;
-  border-radius: 8px;
   margin-bottom: 1.5em;
   margin-left: 1.5em;
   margin-right: 1.5em;
@@ -19,8 +17,8 @@ const Styles = styled.div`
 
 
 const Aumentar = styled.div`
-  width: 160%;
-  height: 160%;
+  width: 140%;
+  height: 140%;
 `;
 
 const Diminuir = styled.div`
@@ -90,10 +88,10 @@ class Graphics extends React.Component {
         <br/><br/>
         {/* <GraphicTotal infoMap={this.props.infoMap}/> */}
         <Styles>
-          <Diminuir>
-        <GraphicTotal/>
-        </Diminuir>
         <GridWrapper>
+          <Aumentar>
+        <GraphicTotal/>
+        </Aumentar>
           <Aumentar>
           <GraphicFemale />
           </Aumentar>
