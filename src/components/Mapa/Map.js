@@ -26,11 +26,11 @@ const Map = ({ setTooltipContent, handler }) => {
         data-tip="" //aparecem os nomes
         projection="geoMercator"
         projectionConfig={{
-          scale: 850,
+          scale: 400,
           center: [-54, -15]
         }}
-        width={800}
-        height={800}
+        width={400}
+        height={400}
       >
         {/* <ZoomableGroup> */}
           <Geographies geography={brTopo}>

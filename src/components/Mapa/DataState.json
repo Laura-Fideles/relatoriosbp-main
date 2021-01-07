@@ -333,6 +333,18 @@
               "REPROVADOS": "3" },
             "id": "TO",
             "arcs": [[-22, -35, -55, -57, -44]]
+          },
+          {
+            "properties": { 
+              "NAME": "Sociedade Brasileira de Pediatria",
+              "CANDIDATOS": "1598",
+              "FALTAS": "158",
+              "APROVADOS" : "1103",
+              "REPROVADOS": "337",
+              "DATA_PROVA" : "22/11/2020",
+              "HORARIO_PROVA": "0"
+            },
+            "id": "SBP"
           }
         ]
       }

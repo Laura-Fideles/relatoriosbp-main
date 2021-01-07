@@ -45,6 +45,7 @@ class TextBox extends React.Component {
   render() {
     return (
       <div>
+        <br/><br/>
         <SearchState filterText={this.state.filterText} inStockOnly={this.state.inStockOnly} onFilterTextChange={this.handleFilterTextChange} onInStockChange={this.handleInStockChange}/>
         <State infoMap={this.props.infoMap}/>
       </div>

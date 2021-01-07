@@ -13,6 +13,11 @@
   }
 }
 
+@media (min-width: 110px){
+  #page-landing-content{
+    max-width: 1100px;
+  }
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -35,4 +40,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
 }
