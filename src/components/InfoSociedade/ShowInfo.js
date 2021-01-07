@@ -45,6 +45,7 @@ class ShowInfo extends React.Component {
         return ( 
           <>
           <NomeSociedade/>
+          <br/>
           <DadosSociedade/>
           </>
          );

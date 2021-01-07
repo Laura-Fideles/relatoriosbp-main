@@ -29,6 +29,12 @@ export const state = {
   datasets: [
     {
       label: 'DataExam',
+      width: [
+        '200%'
+      ],
+      height: [
+        '200%'
+      ],
       backgroundColor:[
         '#66cc33',
         '#f79c29'
@@ -39,7 +45,7 @@ export const state = {
       ],
       data: [69.04,30.96]  //aprovados e reprovados respectivamente
     }
-  ]
+  ],
 }
 
 export class GraphicFemale extends React.Component {
@@ -52,7 +58,7 @@ export class GraphicFemale extends React.Component {
             title: {
               display: true,
               text: 'Taxa de Aprovação Genero Feminino',
-              fontSize: 20
+              fontSize: 20,
             }
           }} />
       </div>

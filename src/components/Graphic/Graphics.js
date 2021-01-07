@@ -14,6 +14,7 @@ const Page = styled.div`
   margin-bottom: 1.5em;
   margin-left: 1.5em;
   margin-right: 1.5em;
+  grid-template-columns: repeat(0, 1fr);
 `;
 
 const GridWrapper = styled.div`
@@ -29,6 +30,7 @@ const GridWrapper = styled.div`
   width: 80%;
   height: 80%;
 `; 
+
 
 class Graphics extends React.Component {
     constructor(props){

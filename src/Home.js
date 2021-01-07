@@ -4,12 +4,6 @@ import ShowMap from './components/Mapa/ShowMap';
 import TextBox from "./components/TextBox/Txtbox_state";
 import ShowInfo from "./components/InfoSociedade/ShowInfo";
 
-const Page = styled.div`
-  align-items: center;
-  display: grid;
-  width: 80%;
-  height: 80%;
-`;
 const GridWrapper = styled.div`
   display: grid;
   margin-top: 3em;
@@ -19,8 +13,8 @@ const GridWrapper = styled.div`
   grid-auto-rows: minmax(25px, auto);
   border-style: double;
   border-radius: 8px;
-  width: 80%;
-  height: 80%;
+  width: 75%;
+  height: 75%;
 `;
 
 const TxtInfoSociedade = styled.div` 
@@ -29,6 +23,15 @@ const TxtInfoSociedade = styled.div`
   margin-left: 6em;
   margin-right: 6em;
   grid-auto-rows: minmax(25px, auto);
+  font-size: 110%;
+  width: 75%;
+  height: 75%;
+`;
+
+const Aumentar = styled.div`
+  width: 200%;
+  height: 200%;
+  font-size: 200%;
 `;
 
 export const Home = () => {
@@ -43,15 +46,17 @@ console.log(ShowInfo);
   return (
     //caixa texto sociedade
     <div>
-      <Page>
+      <>
       <TxtInfoSociedade>
         <ShowInfo/>
       </TxtInfoSociedade>
       <GridWrapper>
         <ShowMap handler={handler}/>
+        <Aumentar>
         <TextBox infoMap={infoMap} handler={handler}/>
+        </Aumentar>
       </GridWrapper>
-    </Page>
+      </>
     </div>
     
 

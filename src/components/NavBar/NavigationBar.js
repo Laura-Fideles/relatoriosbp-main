@@ -1,14 +1,14 @@
 import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
+import logoeduCAT from '../img/logosbp.svg';
 import styled from 'styled-components';
-import logoeduCAT from '../img/logosbp.svg'
 import './navbar.css'
 const Styles = styled.div`
   .navbar { background-color: #000068  }
   a, .navbar-nav, .navbar-light .nav-link {
     color: white; //nomes canto superior direito
     &:hover { color: #66cc33; }
-    font-family: Open Sans;
+    font-family: exo2 regular;
   }
   .navbar-brand {
     font-size: 1.4em;
