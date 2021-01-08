@@ -10,7 +10,7 @@ const DadosSociedade = ({ dados }) => {
             <tbody>
               <tr>
                 <td>Candidatos Presentes: </td>
-                <td>1598</td>
+                <td>1103</td>
                 {/* <td>{dados.candidatos}</td> */}
                 <td>Candidatos Ausentes: </td>
                 <td>158</td>
