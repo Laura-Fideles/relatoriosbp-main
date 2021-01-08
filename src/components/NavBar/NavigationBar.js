@@ -32,7 +32,7 @@ export const NavigationBar = () => (
   <Styles>
     <Navbar expand="lg">
       <img Style='width: 100px' src={logoeduCAT}/>
-      <Navbar.Brand href="/">sociedade brasileira de pediatria</Navbar.Brand> 
+      <Navbar.Brand href="/">sociedade brasileira de pediatria AAAAAAA</Navbar.Brand> 
       {/* de acordo com o manual de identidade visual da sbp, o nome da sociedade deve ser escrito apenas utilizando letras minusculas */}
       <Navbar.Toggle aria-controls="basic-navbar-nav"/>
       <Navbar.Collapse id="basic-navbar-nav">
