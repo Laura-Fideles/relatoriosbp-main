@@ -26,6 +26,9 @@ export const state = {
   labels: [
     'Aprovados', 'Reprovados'
   ],
+  percent:[
+    '%', '%',
+  ],
   datasets: [
     {
       label: 'DataExam',
@@ -37,7 +40,7 @@ export const state = {
         'purple',
         'pink'
       ],
-      data: [69.04,30.96]  //aprovados e reprovados respectivamente
+      data: [69.04,30.96] //aprovados e reprovados respectivamente
     }
   ],
 }
