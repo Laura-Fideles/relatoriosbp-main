@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Graphics from "./components/Graphic/Graphics";
 import ShowInfo from "./components/InfoSociedade/ShowInfo";
 import './components/Graphic/Graphics.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const GridWrapper = styled.div`
   display: grid;
@@ -18,17 +19,6 @@ const GridWrapper = styled.div`
   height: 80%;
 `; 
 
-const TxtInfoSociedade = styled.div` 
-display: grid;
-margin-top: 2em;
-margin-left: 6em;
-margin-right: 6em;
-grid-auto-rows: minmax(25px, auto);
-font-size: 110%;
-width: 75%;
-height: 75%;
-`;
-
 export const About = () => (
 
   // const [ infoMap, setInfoMap ] = useState({})
@@ -37,12 +27,13 @@ export const About = () => (
   //   setInfoMap(params)
   // }
   <>
-  <TxtInfoSociedade>
+
+  <div className="row-cols-xl-2">
+    <div className="container">
   <ShowInfo/>
-  </TxtInfoSociedade>
-  <GridWrapper>
     <Graphics/>
-  </GridWrapper>
+    </div>
+  </div>
     </>
 
 )

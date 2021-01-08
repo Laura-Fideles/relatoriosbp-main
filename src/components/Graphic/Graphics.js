@@ -4,42 +4,31 @@ import GraphicFemale from "./GraphicFemale";
 import GraphicMale from "./GraphicMale";
 import brTopo from "../Mapa/DataState.json";
 import styled from 'styled-components';
+import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const Styles = styled.div`
-  .GraphicFemale { width: 200%; height: 200%;  }
-  align-items: center;
-  display: grid;
-  margin-bottom: 1.5em;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
-  grid-template-columns: repeat(0, 1fr);
-`;
-
-
+  width: 125%;
+  height:125%;
+  
+  `;
 const Aumentar = styled.div`
-  width: 140%;
-  height: 140%;
+  width: 160%;
+  height: 160%;
+  font-size: 160%;
+  justify-self: center;
 `;
 
 const Diminuir = styled.div`
-  width: 60%;
-  height: 60%;
+  width: 70%;
+  height: 7%;
+  font-size: 7%;
+  justify-self: center;
 `;
-
-
 
 const GridWrapper = styled.div`
   display: grid;
-  grid-gap: 10px;
-  margin-top: 1em;
-  margin-left: 6em;
-  margin-right: 6em;
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: minmax(25px, auto);
-  align-items: center;
-  display: grid;
-  width: 80%;
-  height: 80%;
 `; 
 
 
@@ -84,21 +73,23 @@ class Graphics extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <br/><br/>
         {/* <GraphicTotal infoMap={this.props.infoMap}/> */}
         <Styles>
-        <GridWrapper>
-          <Aumentar>
+          <Diminuir>
         <GraphicTotal/>
-        </Aumentar>
+        </Diminuir>
+        <GridWrapper>
+          {/* <div className="container "> */}
           <Aumentar>
           <GraphicFemale />
           </Aumentar>
           <Aumentar>
           <GraphicMale/>
           </Aumentar>
-        </GridWrapper>
+          {/* </div> */}
+          </GridWrapper>
         </Styles>
       </div>
     );

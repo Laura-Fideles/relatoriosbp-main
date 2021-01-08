@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
   
 
 class SearchState extends React.Component {
@@ -34,8 +35,8 @@ class SearchState extends React.Component {
       <div className="row">
         <div className="col-md-6 feature">
         <form onSubmit={this.handleSubmit}>
-          <select styles="border-radius: 10" value={this.props.filterText} onChange={this.handleFilterTextChange}>
-          <option>Selecione um Estado</option> 
+          <select className="form-control" value={this.props.filterText} onChange={this.handleFilterTextChange}>
+          <option >Selecione um Estado</option> 
             <option id= "1" value="Acre">Acre</option>
             <option id= "2" value="Alagoas">Alagoas</option>
             <option id= "3" value="Amapa">Amapa</option>
@@ -62,7 +63,7 @@ class SearchState extends React.Component {
             <option id= "24" value="Sao Paulo">Sao Paulo</option>
             <option id= "25" value="Sergipe">Sergipe</option>
             <option id= "26" value="Tocantins">Tocantins</option>
-          </select><br/>
+          </select>
       </form>
       </div>
     </div>

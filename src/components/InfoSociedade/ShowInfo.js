@@ -3,12 +3,22 @@ import brTopo from "../Mapa/DataState.json";
 import DadosSociedade from './DadosSociedade';
 import NomeSociedade from './NomeSociedade';
 import styled from 'styled-components';
+import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const StyleTitulo = styled.div`
       justify-self: center;
       border-block-end-style: groove;
 `;
 
+
+const TxtInfoSociedade = styled.div` 
+display: grid;
+margin-left: -6em;
+margin-top: 2em;
+  width: 110%;
+  height: 110%;
+  font-size: 110%;
+`;
 
 class ShowInfo extends React.Component {
     
@@ -35,12 +45,14 @@ class ShowInfo extends React.Component {
   
     render() { 
         return ( 
-          <>
+          <div className="container">
+          <TxtInfoSociedade>
           <StyleTitulo>
             <NomeSociedade/>
             </StyleTitulo>
             <DadosSociedade/>
-          </>
+          </TxtInfoSociedade>
+          </div>
          );
     }
 }
