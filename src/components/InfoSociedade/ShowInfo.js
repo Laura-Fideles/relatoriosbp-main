@@ -38,7 +38,7 @@ class ShowInfo extends React.Component {
             aprovados: filteredData['properties']['APROVADOS'],
             reprovados: filteredData['properties']['REPROVADOS'],
             data_prova: filteredData['properties']['DATA_PROVA'],
-            horario_prova: filteredData['properties']['HORARIO_PROVA']
+            horario_prova: filteredData['properties']['HORARIO_PROVA']   
           }
           this.props.handler(infoMap)
         }
