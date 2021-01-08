@@ -4,19 +4,11 @@ import DadosSociedade from './DadosSociedade';
 import NomeSociedade from './NomeSociedade';
 import styled from 'styled-components';
 
-const Styles = styled.div`
-  .nomesociedade {
-    font-size: 1.4em;
-    font-family: Open Sans;
-    color: white; //frase canto superior
-    &:hover { color: white; }
-  }
-  .form-center {
-    position: absolute !important;
-    left: 25%;
-    right: 25%;
-  }
+const StyleTitulo = styled.div`
+      justify-self: center;
+      border-block-end-style: groove;
 `;
+
 
 class ShowInfo extends React.Component {
     
@@ -44,9 +36,10 @@ class ShowInfo extends React.Component {
     render() { 
         return ( 
           <>
-          <NomeSociedade/>
-          <br/>
-          <DadosSociedade/>
+          <StyleTitulo>
+            <NomeSociedade/>
+            </StyleTitulo>
+            <DadosSociedade/>
           </>
          );
     }

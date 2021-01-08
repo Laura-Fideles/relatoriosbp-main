@@ -29,9 +29,9 @@ const TxtInfoSociedade = styled.div`
 `;
 
 const Aumentar = styled.div`
-  width: 200%;
-  height: 200%;
-  font-size: 200%;
+  width: 140%;
+  height: 140%;
+  font-size: 140%;
 `;
 
 export const Home = () => {
