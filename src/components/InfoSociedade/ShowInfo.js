@@ -18,6 +18,7 @@ margin-top: 2em;
   width: 110%;
   height: 110%;
   font-size: 110%;
+  font-family: 'Open Sans';
 `;
 
 class ShowInfo extends React.Component {
