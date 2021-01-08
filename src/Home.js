@@ -3,35 +3,25 @@ import styled from 'styled-components';
 import ShowMap from './components/Mapa/ShowMap';
 import TextBox from "./components/TextBox/Txtbox_state";
 import ShowInfo from "./components/InfoSociedade/ShowInfo";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+const Page = styled.div`
+  width: 400%auto;
+  height: 400%auto;
+  font-size: 400%large;
+`;
 
 const GridWrapper = styled.div`
   display: grid;
-  margin-top: 3em;
-  margin-left: 6em;
-  margin-right: 6em;
+  margin-left: -12em;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: minmax(25px, auto);
   border-style: double;
   border-radius: 8px;
-  width: 75%;
-  height: 75%;
-`;
-
-const TxtInfoSociedade = styled.div` 
-  display: grid;
-  margin-top: 2em;
-  margin-left: 6em;
-  margin-right: 6em;
-  grid-auto-rows: minmax(25px, auto);
-  font-size: 110%;
-  width: 75%;
-  height: 75%;
-`;
-
-const Aumentar = styled.div`
-  width: 140%;
-  height: 140%;
-  font-size: 140%;
+  width: 150%;
+  height: 150%;
+  font-size: 150%;
+  font-family: 'Open Sans';
 `;
 
 export const Home = () => {
@@ -45,19 +35,19 @@ console.log(ShowInfo);
 
   return (
     //caixa texto sociedade
-    <div>
-      <>
-      <TxtInfoSociedade>
+    <div className="row-cols-xl-2">
+      <div className="container">
+      <Page>
         <ShowInfo/>
-      </TxtInfoSociedade>
+        <br/>
       <GridWrapper>
         <ShowMap handler={handler}/>
-        <Aumentar>
         <TextBox infoMap={infoMap} handler={handler}/>
-        </Aumentar>
+        {/* </Aumentar> */}
       </GridWrapper>
-      </>
-    </div>
+      </Page>
+      </div>
+      </div>
     
 
 )
