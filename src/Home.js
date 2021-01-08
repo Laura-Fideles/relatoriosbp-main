@@ -9,6 +9,7 @@ const Page = styled.div`
   width: 400%auto;
   height: 400%auto;
   font-size: 400%large;
+  font-family: 'Open Sans';
 `;
 
 const GridWrapper = styled.div`

@@ -9,7 +9,7 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 const Styles = styled.div`
   width: 125%;
   height:125%;
-  
+  font-family: 'Open Sans';
   `;
 const Aumentar = styled.div`
   width: 160%;

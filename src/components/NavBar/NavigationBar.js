@@ -3,9 +3,9 @@ import { Nav, Navbar } from 'react-bootstrap';
 import logoeduCAT from '../img/logosbp.svg';
 import styled from 'styled-components';
 import './navbar.css'
-import mapa from "../img/brasil (3).svg";
+import mapa from "../img/mapa-vazio.svg";
 import grafico from "../img/grafico-de-pizza.svg";
-import hMapa from "../img/brasil.svg";
+import hMapa from "../img/mapa-cheio.svg";
 import hGrafico from "../img/grafico-de-pizza-preenchido.svg";
 
 
